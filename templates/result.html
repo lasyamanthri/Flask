@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	
+
+	<div class="results">
+
+
+{{prediction}}
+	{% if prediction == 1%}
+	<h2 style="color:red;">SQL INJECTION-- ATTEMPT TO STEAL THE DATA</h2>
+	{% elif prediction == 0%}
+	<h2 style="color:red;">XSS ATTACK ALERT</h2>
+	{% endif %}
+	</div>
+
+</body>
+</html>
